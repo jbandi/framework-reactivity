@@ -3,15 +3,15 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-counter',
   template: `
-    <div>
+    <div class="counter-display">
       {{count}}
     </div>
     <div>
-      <button (click)="increase()">+</button>
-      <button (click)="decrease()">-</button>
+      <button mat-raised-button color="primary" (click)="increase()">+</button>
+      <button mat-raised-button color="primary" (click)="decrease()">-</button>
     </div>
     <div>
-      <button (click)="toggle()">Toggle</button>
+      <button mat-raised-button color="primary" (click)="toggle()">Toggle</button>
     </div>
   `,
   styleUrls: ['./counter.component.css']
