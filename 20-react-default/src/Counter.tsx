@@ -1,6 +1,28 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles(createStyles({
+    screen: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+    },
+    counterDisplay: {
+        width: 100,
+        margin: 5,
+        padding: 15,
+        border: "purple solid 2px",
+        fontSize: "xx-large",
+    },
+    button: {
+        margin: 4
+    }
+}));
 
 export function Counter() {
+
+    const classes = useStyles();
 
     const [count, setCount] = useState(0);
     let intervalRef = useRef<number>();
@@ -11,11 +33,11 @@ export function Counter() {
         }, 1000)
     }, []);
 
-    function increase(){
+    function increase() {
         setCount(count + 1);
     }
 
-    function decrease(){
+    function decrease() {
         setCount(count - 1);
     }
 
@@ -31,15 +53,20 @@ export function Counter() {
     }
 
     return (
-        <>
-            <div> {count} </div>
+        <div className={classes.screen}>
+
+            <div className={classes.counterDisplay}> {count} </div>
             <div>
-                <button onClick={decrease}>-</button>
-                <button onClick={increase}>+</button>
+                <div>
+                    <Button onClick={decrease} variant="contained" color="primary" className={classes.button}>-</Button>
+                    <Button onClick={increase} variant="contained" color="primary" className={classes.button}>+</Button>
+                </div>
+
+                <div>
+                    <Button onClick={toggle} variant="contained" color="primary"
+                            className={classes.button}>Toggle</Button>
+                </div>
             </div>
-            <div>
-                <button onClick={toggle}>Toggle</button>
-            </div>
-        </>
+        </div>
     );
 }
