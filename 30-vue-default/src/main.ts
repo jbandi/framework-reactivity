@@ -22,5 +22,7 @@ new Vue({
 // watch(() => {
 //   document.body.innerHTML = `<h1> count is ${state.count} </h1>`
 // });
+
+// setInterval(() => state.count++, 1000);
 //
 // window.DEBUG = state;
