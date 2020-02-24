@@ -1,13 +1,15 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Counter</router-link> |
-      <router-link to="/classic">Classic Counter</router-link> |
-      <router-link to="/about">About</router-link>
+  <v-app id="app">
+    <div id="app">
+      <div id="nav">
+        <router-link to="/">Counter</router-link> | <router-link to="/classic">Classic Counter</router-link> |
+        <router-link to="/about">About</router-link>
+      </div>
+      <img src="./assets/logo.png" width="80" />
+
+      <router-view />
     </div>
-    <img src="./assets/logo.png" width="80"/>
-    <router-view />
-  </div>
+  </v-app>
 </template>
 
 <style>

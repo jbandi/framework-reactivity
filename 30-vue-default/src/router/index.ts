@@ -7,8 +7,8 @@ import ClassicCounterView from '@/views/ClassicCounterView.vue';
 Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', name: 'Home', component: Counter },
-  { path: '/classic', name: 'Home', component: ClassicCounterView },
+  { path: '/', name: 'Counter', component: Counter },
+  { path: '/classic', name: 'Classsic', component: ClassicCounterView },
   {
     path: '/about',
     name: 'About',

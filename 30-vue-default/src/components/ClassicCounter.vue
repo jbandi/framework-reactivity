@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <div>{{ count }}</div>
+  <div class="counter">
+    <div class="counter-display">{{ count }}</div>
     <div>
-      <button @click="decrease">-</button>
-      <button @click="increase">+</button>
+      <v-btn @click="decrease" color="primary" class="counter-btn">-</v-btn>
+      <v-btn @click="increase" color="primary" class="counter-btn">+</v-btn>
     </div>
     <div>
-      <button @click="toggle">Toggle</button>
+      <v-btn @click="toggle" color="primary" class="counter-btn">Toggle</v-btn>
     </div>
   </div>
 </template>
@@ -46,4 +46,25 @@ export default class ClassicCounter extends Vue {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+  .counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .counter-display {
+    margin: 5px;
+    padding: 15px;
+    border: purple solid 2px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+  }
+
+  .counter-btn {
+    margin: 4px;
+  }
+</style>

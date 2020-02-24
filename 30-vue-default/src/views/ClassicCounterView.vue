@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-  .screen {
-    margin: 20px;
-  }
+.screen {
+  margin: 20px;
+}
 </style>
