@@ -3,10 +3,12 @@ import { createStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(createStyles({
-    screen: {
+    counter: {
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        backgroundColor: 'lightcyan',
+        padding: 20,
     },
     counterDisplay: {
         width: 100,
@@ -53,7 +55,7 @@ export function Counter() {
     }
 
     return (
-        <div className={classes.screen}>
+        <div className={classes.counter}>
 
             <div className={classes.counterDisplay}> {count} </div>
             <div>
