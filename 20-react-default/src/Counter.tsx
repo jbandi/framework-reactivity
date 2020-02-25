@@ -30,9 +30,9 @@ export function Counter() {
     const intervalRef = useRef<number>();
 
     useEffect(() => {
-        setInterval(() => {
-            setCount(count => count + 1)
-        }, 1000)
+        // setInterval(() => {
+        //     setCount(count => count + 1)
+        // }, 1000)
     }, []);
 
     function increase() {
