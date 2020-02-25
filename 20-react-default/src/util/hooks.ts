@@ -17,7 +17,7 @@ export function useCounter(): [number, () => void]{
 // Hook from:
 // https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 type Callback = () => any
-export function useInterval(callback: Callback, delay: number) {
+export function useInterval(callback: Callback, delay: number | null) {
     const savedCallback = useRef<Callback>();
 
     // Remember the latest callback.
