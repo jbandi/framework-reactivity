@@ -27,7 +27,7 @@ export function Counter() {
     const classes = useStyles();
 
     const [count, setCount] = useState(0);
-    let intervalRef = useRef<number>();
+    const intervalRef = useRef<number>();
 
     useEffect(() => {
         setInterval(() => {
