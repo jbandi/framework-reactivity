@@ -17,6 +17,8 @@ Go to `http://localhost:4200/assets/no-load.html`
 
 
 
+
+
 ### 03: Unidirectional Data Flow
 
 Inject the parent into the Counter component, and change the parent when rendering:
@@ -30,6 +32,8 @@ ngOnInit(): void {
 ```
 
 Parent is not updated and in Dev mode we get an exception: `ExpressionChangedAfterItHasBeenCheckedError`.
+
+
 
 
 
