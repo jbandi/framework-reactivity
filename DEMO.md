@@ -352,6 +352,13 @@ In the example `31-vue-barebone`:
 
 - add the property later on -> no reactivity -> type is a plain object
 - Fix: use `Vue.set(state, 'person', {name: 'Jonas'})`
+- Limitations: add a property to state of type `Array`: 
+  - print the size: `${state.items.length}`
+  - then add an item:  `DEBUG.items.push(42)` -> working
+  - then add an item:  `DEBUG.items[42] = 42` -> not working
+- Limitations: add a property to state of type `Map`: `items: new Map()`
+  - print the size: `${state.items.size}`
+  - then add an item:  `DEBUG.items.set(1, 42)`
 
 
 
