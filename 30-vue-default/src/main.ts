@@ -3,6 +3,7 @@ import App from './App.vue';
 import VueCompositionApi from '@vue/composition-api';
 import router from './router';
 import vuetify from './plugins/vuetify';
+// import { initCounterStore } from '@/counterStore';
 
 Vue.use(VueCompositionApi);
 
@@ -11,20 +12,8 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   vuetify,
+  // created: () => {
+  //   initCounterStore();
+  // },
   render: h => h(App)
 }).$mount('#app');
-
-// Basic demo of reactivity in Vue:
-// import { reactive, watch } from '@vue/composition-api'
-//
-// const state = reactive({
-//   count: 0
-// });
-//
-// watch(() => {
-//   document.body.innerHTML = `<h1> count is ${state.count} </h1>`
-// });
-
-// setInterval(() => state.count++, 1000);
-//
-// window.DEBUG = state;
