@@ -47,24 +47,26 @@ export default class ClassicCounter extends Vue {
 </script>
 
 <style scoped>
-  .counter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightcyan;
+  padding: 30px;
+}
 
-  .counter-display {
-    margin: 5px;
-    padding: 15px;
-    border: purple solid 2px;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: xx-large;
-  }
+.counter-display {
+  margin: 5px;
+  padding: 15px;
+  border: purple solid 2px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: xx-large;
+}
 
-  .counter-btn {
-    margin: 4px;
-  }
+.counter-btn {
+  margin: 4px;
+}
 </style>

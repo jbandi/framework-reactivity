@@ -57,6 +57,8 @@ export default Component;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: lightcyan;
+  padding: 30px;
 }
 
 .counter-display {

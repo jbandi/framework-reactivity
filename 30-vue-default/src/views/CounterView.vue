@@ -1,5 +1,6 @@
 <template>
   <div class="screen">
+    <h1>Counter</h1>
     <Counter />
   </div>
 </template>
@@ -16,6 +17,7 @@ export default class CounterView extends Vue {}
 
 <style scoped>
 .screen {
-  margin: 20px;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
 }
 </style>

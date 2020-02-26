@@ -1,5 +1,6 @@
 <template>
   <div class="screen">
+    <h1>Classic</h1>
     <ClassicCounter />
   </div>
 </template>
@@ -17,6 +18,7 @@ export default {
 
 <style scoped>
 .screen {
-  margin: 20px;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
 }
 </style>
