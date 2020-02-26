@@ -11,13 +11,29 @@ Go to `http://localhost:4200/assets/no-load.html`
 ### 02: Change Detection
 
 1. Counter Component: Wrap `count`with getter/setter with log statement.
-2. Counter Screen Component: Wrap `title`with getter/setter with log statement -> getter is caclled when counter changes.
+2. Counter Screen Component: Wrap `title`with getter/setter with log statement -> getter is called when counter changes.
 3. Introduce new dummy component with a setIntervall -> all the getters are still called.
 4. Use `window.ng` to change a component -> the UI does not update -> call `ng.applyChanges(comp)` 
 
 
 
-### 03: Setter/Getter - ngOnChanges - Pure Pipe 
+### 03: Unidirectional Data Flow
+
+Inject the parent into the Counter component, and change the parent when rendering:
+
+```typescript
+constructor(private parent: CounterScreenComponent) {}
+
+ngOnInit(): void {
+  this.parent.title = 'Update from Child!'
+}
+```
+
+Parent is not updated and in Dev mode we get an exception: `ExpressionChangedAfterItHasBeenCheckedError`.
+
+
+
+### 04: Setter/Getter - ngOnChanges - Pure Pipe 
 
 - Call `fibonacci(36)` in the getter of the counter screen component.
 
@@ -38,20 +54,6 @@ ngOnChanges(changes: SimpleChanges): void {
 - Implement pure pipe <div>{{val | fib}}</div>
 
 
-
-### 04: Unidirectional Data Flow
-
-Inject the parent into the Counter component, and change the parent when rendering:
-
-```typescript
-constructor(private parent: CounterScreenComponent) {}
-
-ngOnInit(): void {
-  this.parent.title = 'Update from Child!'
-}
-```
-
-Parent is not updated and in Dev mode we get an exception: `ExpressionChangedAfterItHasBeenCheckedError`.
 
 
 

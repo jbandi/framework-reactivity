@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Counter } from './Counter';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 
@@ -13,10 +13,11 @@ const useStyles = makeStyles(createStyles({
 export function CounterScreen() {
 
     const classes = useStyles();
+    const [title, setTitle] = useState('Counter');
 
     return (
         <div className={classes.counter}>
-            <h1>Counter</h1>
+            <h1>{title}</h1>
            <Counter/>
         </div>
     )
