@@ -20,7 +20,7 @@ export default class ClassicCounter extends Vue {
   private intervalHandle?: number;
 
   mounted() {
-    console.log('MOunted');
+    console.log('Mounted');
     (window as any)['DEBUG'] = this;
     // setInterval(() => {
     //   this.count++;
