@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playground</title>
+</head>
+<body>
+
+<div style="text-align: center">
+    <button id="countBtn">Count!</button>
+    <h1 id="output"></h1>
+</div>
+
+<script src="https://unpkg.com/rxjs@6/bundles/rxjs.umd.js"></script>
+
+<script>
+  const {of, from, throwError, fromEvent, interval, merge, zip, forkJoin} = rxjs;
+  const {filter, map, delay, mergeMap, flatMap, switchMap, concatMap, tap, scan, take, skip, startWith} = rxjs.operators;
+  const {ajax} = rxjs.ajax;
+
+  const countBtn = document.getElementById('countBtn');
+  const output = document.getElementById('output');
+
+  fromEvent(countBtn, 'click')
+    .pipe(
+      tap(e => console.log('Button Clicked', e)),
+      scan((acc, v) => acc + 1, 0),
+      startWith(0)
+    )
+    .subscribe(
+      (v) => output.innerText = v
+    );
+
+</script>
+
+
+<!--<script type="module" src="app.js"></script>-->
+
+</body>
+</html>
